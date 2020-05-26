@@ -13,6 +13,7 @@ ARG KUBERNETES_VERSION=v1.17.3
 
 RUN case $(uname -m) in \
        x86_64) ARCH="amd64" ;; \
+       ppc64le) ARCH="ppc64le" ;; \
        s390x) ARCH="s390x";; \
     esac && \
     microdnf install -y openssl && \
